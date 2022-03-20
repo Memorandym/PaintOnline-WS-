@@ -1,0 +1,24 @@
+@import "./variable";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  background-color: $background-color;
+}
+
+.inputName{
+  margin: auto auto auto 0;
+  white-space: nowrap;
+  color: #f62c2a;
+  font-weight: bold;
+}
+
+
+

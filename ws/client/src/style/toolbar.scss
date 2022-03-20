@@ -1,0 +1,158 @@
+@import "./variable";
+
+.toolbar{
+  height: $toolbar-height;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  z-index: 1;
+  align-items: center;
+
+  &__btn{
+    height: 26px;
+    width: 26px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .brush {
+    background: url('../assets/img/Disabled/brushDisable.png') no-repeat center center;
+    background-size: cover;
+    &:hover {
+      background: url('../assets/img/Enabled/brushEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+    &:focus{
+      background: url('../assets/img/Enabled/brushEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .rect {
+    background: url('../assets/img/Disabled/recDisable.png') no-repeat center center;
+    background-size: cover;
+    &:hover {
+      background: url('../assets/img/Enabled/recEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+    &:focus{
+      background: url('../assets/img/Enabled/recEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .circ {
+    background: url('../assets/img/Disabled/cirDisable.png') no-repeat center center;
+    background-size: cover;
+    &:hover {
+      background: url('../assets/img/Enabled/cirEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+    &:focus{
+      background: url('../assets/img/Enabled/cirEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .erase {
+    background: url('../assets/img/Disabled/eraseDisable.png') no-repeat center center;
+    background-size: cover;
+    &:hover {
+      background: url('../assets/img/Enabled/eraseEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+    &:focus{
+      background: url('../assets/img/Enabled/eraseEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .line {
+    background: url('../assets/img/Disabled/lineDisable.png') no-repeat center center;
+    background-size: cover;
+    &:hover {
+      background: url('../assets/img/Enabled/lineEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+    &:focus{
+      background: url('../assets/img/Enabled/lineEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .fill {
+    background: url('../assets/img/Disabled/fillDisable.png') no-repeat center center;
+    background-size: cover;
+    &:hover {
+      background: url('../assets/img/Enabled/fillEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+    &:focus{
+      background: url('../assets/img/Enabled/fillEnabled.png') no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+
+  .undo {
+    margin-left: auto;
+    background: url('../assets/img/undo.png') no-repeat center center;
+  }
+  .redo {
+    background: url('../assets/img/redo.png') no-repeat center center;
+  }
+  .save {
+    margin: auto 1rem auto auto;
+    background: url('../assets/img/save.png') no-repeat center center;
+  }
+
+  .stateURL{
+    display: flex;
+    margin-left: auto ;
+    align-items: center;
+
+    .btnCopy{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-right: 10px;
+      padding: 6px;
+    }
+  }
+
+}
+
+.brushInfo{
+  width: 25px;
+  height:25px;
+  margin-left: 0.5rem;
+  position: absolute;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.settingbar{
+  height: $toolbar-height;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  border-color: gray;
+  border-width: 3px;
+  border-style: solid;
+  top:($toolbar-height)-4px;
+}
+
