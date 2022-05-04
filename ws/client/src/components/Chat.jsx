@@ -26,7 +26,7 @@ const Chat = ({username}) => {
 
 
     function connect() {
-        socket.current = new WebSocket(`ws://176.51.220.80:5000/chat`)
+        socket.current = new WebSocket(`ws://localhost:5000/chat`)
 
         socket.current.onopen = () => {
             setConnected(true)

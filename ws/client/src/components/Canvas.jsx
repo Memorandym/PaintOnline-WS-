@@ -29,7 +29,7 @@ const Canvas = observer(({username})=> {
     const gettes = () => {
         canvasState.setCanvas(canvasRef.current)
         let ctx = canvasRef.current.getContext('2d')
-        axios.get(`http://176.51.220.80:5000/image?id=${params.id}`)
+        axios.get(`http://localhost:5000/image?id=${params.id}`)
             .then(response => {
                 const img = new Image()
                 img.src = response.data
@@ -47,7 +47,7 @@ const Canvas = observer(({username})=> {
 
     useEffect(() => {
         if (canvasState.username) {
-            const socket = new WebSocket(`ws://176.51.220.80:5000/`);
+            const socket = new WebSocket(`ws://localhost:5000/`);
             canvasState.setSocket(socket)
             canvasState.setSessionId(params.id)
             toolState.setTool(new Brush(canvasRef.current, socket, params.id))
@@ -111,12 +111,12 @@ const Canvas = observer(({username})=> {
 
     const mouseDownHandler = () => {
         canvasState.pushToUndo(canvasRef.current.toDataURL())
-        axios.post(`http://176.51.220.80:5000/image?id=${params.id}`,{img: canvasRef.current.toDataURL()})
+        axios.post(`http://localhost:5000/image?id=${params.id}`,{img: canvasRef.current.toDataURL()})
 
     }
 
     const mouseUpHandler = () => {
-        axios.post(`http://176.51.220.80:5000/image?id=${params.id}`,{img: canvasRef.current.toDataURL()})
+        axios.post(`http://localhost:5000/image?id=${params.id}`,{img: canvasRef.current.toDataURL()})
     }
 
 
